@@ -1,0 +1,3 @@
+[submodule "obs-gitworkflow-testpackage"]
+	path = obs-gitworkflow-testpackage
+	url = https://github.com/openSUSE/obs-testpackage.git
