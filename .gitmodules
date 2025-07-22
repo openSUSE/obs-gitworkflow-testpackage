@@ -1,0 +1,3 @@
+[submodule "obs-testpackage"]
+	path = obs-testpackage
+	url = https://github.com/openSUSE/obs-testpackage/
