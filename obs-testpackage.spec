@@ -1,7 +1,7 @@
 #
-# spec file for package obs-gitworkflow-testpackage
+# spec file for package obs-testpackage
 #
-# Copyright (c) 2025 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -15,28 +15,30 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-Name:		obs-gitworkflow-testpackage
+Name:           obs-testpackage
 Version:	0.0.1
 Release:	0
-License:	GPL-3.0
-Summary:	Package for testing the git workflow/scmbridge in open-build-service
-Url:		https://github.com/openSUSE/obs-gitworkflow-testpackage
+License:	GPL-2.0 and GPL-3.0
+Summary:	This package is only for testing services in open-build-service
+Url:		https://github.com/M0ses/obs-testpackage.git
 Group:		Productivity/Networking/Web/Utilities
 Source:		%{name}-%{version}.tar.gz
 #Patch:
 #BuildRequires:
 #PreReq:
 #Provides:
-#BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
-This package is only for testing the git workflow/scmbridge in open-build-service.
 
 %prep
+%setup -q
 
 %build
+make
 
 %install
+make install DESTDIR=%{buildroot} %{?_smp_mflags}
 
 %post
 
