@@ -22,13 +22,13 @@ License:	GPL-3.0
 Summary:	Package for testing obs-scm-bridge in open-build-service
 Url:		https://github.com/openSUSE/obs-gitworkflow-testpackage.git
 Group:		Productivity/Networking/Web/Utilities
-Source:		%{name}-%{version}.tar.gz
+Source:		%{name}.tar.gz
 
 %description
 This package is only for testing services in open-build-service
 
 %prep
-%setup -q
+%setup -q -n %{name}
 
 %build
 make
